@@ -1,5 +1,5 @@
 const CardPrice = ({ price }) => {
-    return <span className="w-fit font-extrabold">{price}</span>
+    return <span className="font-extrabold">{price}</span>
 }
 
 export default CardPrice;

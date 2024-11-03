@@ -14,11 +14,13 @@ const CardItems = ({ datas, error, isLoading }) => {
     }
 
     return (
-        <ul className="">
+        <ul className="md:grid grid-cols-4 m-8 gap-7 text-center">
             {datas.map((item, index) => (
-                <li key={index}>
+                <li key={index} className="grid grid-rows-subgrid row-span-4 bg-rose-300 border-red-800 border-solid border-4 p-1 max-w-[30rem]">
                     <CardImage image={item.image} />
                     <CardTitle title={item.title} />
+                    <CardPrice price={item.price} />
+                    <CardButton />
                 </li>
             ))}
         </ul>

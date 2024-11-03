@@ -9,7 +9,7 @@ const CardContainer = () => {
     useEffect(() => {
         const doFetch = async () => {
             try {
-                const response = await fetch("https://fakestoreapi.com/products?limit=1")
+                const response = await fetch("https://fakestoreapi.com/products?limit=5")
                 const results = await response.json()
 
                 if (!response.ok) throw new Error(`Error fetching data: ${response.status}`)
@@ -27,12 +27,8 @@ const CardContainer = () => {
     }, [])
 
     console.log(datas);
-    return (
-        <div>
-            <CardItems datas={datas} error={error} isLoading={isLoading} />
-        </div>
 
-    )
+    return <CardItems datas={datas} error={error} isLoading={isLoading} />
 }
 
 export default CardContainer;
